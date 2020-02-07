@@ -1,28 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>JavaScript Events</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <ul>
-    <li><img src="images/ylw.gif" alt="yellow" id="yellow"></li>
-    <li><img src="images/org.gif" alt="orange" id="orange"></li>
-    <li><img src="images/ppl.gif" alt="purple" id="purple"></li>
-    <li><img src="images/blu.gif" alt="blue" id="blue"></li>
-    <li><img src="images/pnk.gif" alt="pink" id="pink"  ></li>
-    <li><img src="images/grn.gif" alt="green" id="green"></li>
-    <li><img src="images/ygr.gif" alt="ygreen" id="ygreen"></li>
-    <li><img src="images/gry.gif" alt="gray" id="gray"></li>
-    <li><img src="images/red.gif" alt="red" id="red"></li>
-  </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Events</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul>
+      <li><img src="images/images/ylw.gif" alt="yellow" id="yellow" /></li>
+      <li><img src="images/images/org.gif" alt="orange" id="orange" /></li>
+      <li><img src="images/images/ppl.gif" alt="purple" id="purple" /></li>
+      <li><img src="images/images/blu.gif" alt="blue" id="blue" /></li>
+      <li><img src="images/images/pnk.gif" alt="pink" id="pink" /></li>
+      <li><img src="images/images/grn.gif" alt="green" id="green" /></li>
+      <li><img src="images/images/ygr.gif" alt="ygreen" id="ygreen" /></li>
+      <li><img src="images/images/gry.gif" alt="gray" id="gray" /></li>
+      <li><img src="images/images/red.gif" alt="red" id="red" /></li>
+    </ul>
 
-  
-  <script>
-
-    
-  </script>
-
-</body>
+    <script>
+      let ul = document.querySelector("ul");
+      ul.addEventListener("click", function(e) {
+        switch (e.target.id) {
+          case "yellow":
+            alert("Yellow image");
+            break;
+          case "orange":
+            alert("Orange image");
+            break;
+          case "purple":
+            alert("Purple image");
+            break;
+          case "blue":
+            alert("Blue image");
+            break;
+          case "pink":
+            alert("Pink image");
+            break;
+          case "green":
+            alert("Green image");
+            break;
+          case "ygreen":
+            alert("YGreen image");
+            break;
+          case "gray":
+            alert("Gray image");
+            break;
+          case "red":
+            alert("Red image");
+            break;
+          default:
+            break;
+        }
+      });
+    </script>
+  </body>
 </html>

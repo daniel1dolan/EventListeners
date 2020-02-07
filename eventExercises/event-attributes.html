@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JavaScript </title>
+    <title>JavaScript</title>
     <link rel="stylesheet" href="css/c06.css" />
   </head>
   <body>
@@ -9,20 +9,27 @@
       <h1>List King</h1>
       <h2>New Account</h2>
       <form method="post" action="http://www.example.org/register">
-
         <label for="username">Create a username: </label>
-        <input type="text" id="username" onblur="checkUsername()" />
+        <input type="text" id="username" />
         <div id="feedback"></div>
 
         <label for="password">Create a password: </label>
         <input type="password" id="password" />
 
         <input type="submit" value="sign up!" />
-
       </form>
     </div>
-    
 
-    
+    <script>
+      let username = document.getElementById("username");
+      let feedback = document.getElementById("feedback");
+      username.addEventListener("blur", function(e) {
+        if (e.target.value.length < 5) {
+          feedback.textContent = "user name must be 5 characters or more";
+        } else {
+          feedback.textContent = "";
+        }
+      });
+    </script>
   </body>
 </html>
